@@ -39,15 +39,25 @@
 
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item active">
-							<a class="nav-link" href="{% url 'sales:index' %}">Home</a>
-						</li>
-						<li><a class="nav-link" href="{% url 'sales:shop' %}">Shop</a></li>
-						<li><a class="nav-link" href="{% url 'sales:about' %}">About us</a></li>
-						<li><a class="nav-link" href="{% url 'sales:services' %}">Services</a></li>
-						<li><a class="nav-link" href="{% url 'sales:blog' %}">Blog</a></li>
-						<li><a class="nav-link" href="{% url 'sales:contact' %}">Contact us</a></li>
-                        <li><a class="nav-link" href="{% url 'sales:thankyou' %}">Thank you</a></li>
+
+                        <li class="nav-item {% if navbar == 'index' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'sales:index'%}">Home</a>
+      </li>
+						<li class="nav-item {% if navbar == 'shop' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'sales:shop' %}">Shop</a>
+      </li>
+							<li class="nav-item {% if navbar == 'about' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'sales:about'%}">About us</a>
+      </li>
+									<li class="nav-item {% if navbar == 'services' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'sales:services'%}">Services</a>
+      </li>
+									<li class="nav-item {% if navbar == 'blog' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'sales:blog'%}">Blog</a>
+      </li>
+									<li class="nav-item {% if navbar == 'contact' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'sales:contact'%}">Contact us</a>
+      </li>
 					</ul>
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
